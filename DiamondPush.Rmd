@@ -1,0 +1,28 @@
+---
+title: "DiamondPush"
+author: "Yuan"
+date: "2024-02-20"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+head(diamonds)
+
+```
+# Use dplyr commands to create a diamonds data table that shows columns price, x, y and z. Also price values should be greater than 17000.
+
+```{r}
+diamond_table <- diamonds %>%
+  filter(price > 17000) %>%
+  select(price, x, y, z)
+
+diamond_table
+
+```
+
+
